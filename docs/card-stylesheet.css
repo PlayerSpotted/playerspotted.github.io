@@ -1,0 +1,41 @@
+body {
+    background: linear-gradient(66deg, #042e83, #440483);
+    color: #ffffff;
+}
+
+a {
+    color: #9350d5;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.title-container {
+    margin: 24px auto;
+    max-width: 1000px;
+}
+
+.container {
+    background: #00000055;
+    border: solid #9350d5;
+    border-radius: 16px;
+    box-shadow: 2px 3px 4px #000000;
+    margin: 24px auto;
+    max-width: 800px;
+    padding: 8px 24px 16px;
+}
+
+.container * {
+    max-width: 100%;
+}
+
+.container img {
+    border-radius: 8px;
+    box-shadow: 2px 3px 4px #000000;
+}
+
+.container a > span {
+    display: block;
+    margin: 8px auto;
+    width: fit-content;
+}
+
