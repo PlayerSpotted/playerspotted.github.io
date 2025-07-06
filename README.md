@@ -1,6 +1,7 @@
-README
-or don't see if I care, cause I do.
+README.
 
+or don't see if I care, cause I do.
+ASCII in a preview window is hard.
 
    ) )
   ( (
