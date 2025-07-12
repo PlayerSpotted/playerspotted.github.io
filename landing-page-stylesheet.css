@@ -139,6 +139,10 @@ hr.divider {
     margin-top: 0;
 }
 
+.text-box img {
+    max-width: 100%;;
+}
+
 .mobile-reverse-cols {
     display: flex;
     flex-direction: column-reverse;
