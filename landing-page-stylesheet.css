@@ -1,0 +1,252 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+    height: 100%;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+a {
+    color: #0000e6;
+}
+
+a:active, a:visited {
+    color: #541b87;
+}
+
+.moon-backdrop {
+    background: radial-gradient(circle at 15% 5%, #7481cc, transparent), radial-gradient(circle at 100% 0, #042e83, transparent);
+    background-color: #000000;
+    min-height: inherit;
+    width: 100%;
+}
+
+.header-content > * {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-container {
+    background: #00000033;
+    border-bottom: solid #2200bb;
+    height: 128px;
+    padding-bottom: 12px;
+    position: fixed;
+    width: 100%;
+}
+
+h1.page-title {
+    color: #f0f8ff;
+    margin-bottom: 0;
+    margin-left: 24px;
+    margin-top: 0;
+}
+
+
+.socials-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.socials-font * {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.socials-container {
+    display: inline;
+    min-height: 85px;
+    width: 50%;
+}
+
+.socials-container > a {
+    background: #ffffff88;
+    border: solid #2200bb;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    padding: 16px;
+    width: fit-content;
+}
+
+.socials-container > a:hover span {
+    font-size: 24px;
+}
+
+.light-focus, .light-focus * {
+    transition-duration: 200ms;
+}
+
+.light-focus:hover,
+.light-focus:focus {
+    background: #ffffff;
+}
+
+.page-content-container {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-bottom: 64px;
+    padding-top: 142px;
+}
+
+hr.divider {
+    margin-bottom: 16px;
+}
+
+.left-shift {
+    transform: translateX(-2.5vw);
+}
+
+.round-fade-title {
+    background: linear-gradient(to right, transparent, #ffffff44 8vw);
+    border-radius: 0 24px 24px 0;
+    padding: 12px 5vw 12px 10vw;
+    width: fit-content;
+}
+
+.round-title {
+    background: #ffffff44;
+    border-radius: 24px;
+    padding: 12px 5vw 12px 5vw;
+    width: fit-content;
+}
+
+.text-box {
+    background-color: #00000022;
+    border: solid #6423c3;
+    border-radius: 8px;
+    color: #eeeeee;
+    font-size: 18px;
+    margin-bottom: 24px;
+    padding: 24px;
+}
+
+.text-box h2 {
+    text-shadow: -1px 2px 3px #4d1b98;
+    margin-top: 0;
+}
+
+.mobile-reverse-cols {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.desktop-half-col {
+    width: 100%;
+}
+
+.img-placeholder {
+    height: 200px;
+    width: 80%;
+    margin: auto;
+    background: purple;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.slide-in-left {
+    animation: slide-in-from-left 2s cubic-bezier(0.45, 0.45, 0.2, 1.25) backwards;
+}
+
+.slide-in-right {
+    animation: slide-in-from-right 2s cubic-bezier(0.45, 0.45, 0.2, 1.25) backwards;
+}
+
+.slide-in-bottom {
+    animation: slide-in-from-bottom 2s cubic-bezier(0.45, 0.45, 0.2, 1.25) backwards;
+}
+
+@media (min-width: 800px) {
+    .socials-container {
+        display: inline;
+        width: 25%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .round-fade-title {
+        background: linear-gradient(to right, transparent, #ffffff44 4vw);
+        padding-left: 5vw;
+        min-width: 150px;
+    }
+
+    .desktop-half-col {
+        width: 50%;
+    }
+
+    .mobile-reverse-cols {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@keyframes slide-in-from-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%)
+    }
+}
+
+@keyframes slide-in-from-right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%)
+    }
+}
+
+@keyframes slide-in-from-bottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    25% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+
+#signature {
+    background: linear-gradient(45deg, #ffffff, #c0c0c0, #ffffff, #c0c0c0, #ffffff);
+    background-clip: text;
+    color: transparent;
+    font-size: 12px;
+    margin-left: auto;
+    padding-bottom: 4px;
+    padding-right: 4px;
+    text-align: right;
+    width: fit-content;
+}
