@@ -31,26 +31,24 @@ a:active, a:visited {
 }
 
 .header-content .title-container {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 64px;
+    transform: translatey(-50%);
 }
 
 .header-container {
-    border-bottom: solid #2200bb;
+    border-bottom: solid 4px #2200bb;
     height: 128px;
     padding-bottom: 12px;
     position: fixed;
     pointer-events: none;
     width: 100%;
+    z-index: 10;
 }
 
 .starry-scroll::before {
-    animation: scroll-stars 60s linear infinite;
+    animation: scroll-stars 30s ease-in-out alternate infinite;
     background: url("images/starrybackground.png");
-    background-repeat: repeat;
+    background-repeat: repeat-x;
     content: '';
     height: inherit;
     opacity: 0.33;
@@ -79,13 +77,13 @@ h1.page-title {
 
 .socials-container {
     display: inline;
-    min-height: 85px;
+    min-height: 95px;
     width: 100%;
 }
 
 .socials-container > a {
     background: #ffffff88;
-    border: solid #2200bb;
+    border: solid 4px #2200bb;
     border-radius: 12px;
     display: block;
     margin-bottom: 8px;
@@ -94,8 +92,20 @@ h1.page-title {
     width: fit-content;
 }
 
-.socials-container > a:hover span {
+.socials-container > a:hover .social-tag {
     font-size: 24px;
+    transform: translateY(-25%);
+}
+
+.icon > img {
+    height: auto;
+    max-width: 32px;
+}
+
+.social-tag {
+    display: inline-block;
+    position: relative;
+    transform: translateY(-33%);
 }
 
 .light-focus, .light-focus * {
@@ -116,10 +126,6 @@ h1.page-title {
 
 hr.divider {
     margin-bottom: 16px;
-}
-
-.left-shift {
-    transform: translateX(-2.5vw);
 }
 
 .round-fade-title {
@@ -155,6 +161,12 @@ hr.divider {
     max-width: 100%;;
 }
 
+.bordered-img {
+    border: solid 4px #2200bb;
+    border-radius: 12px;
+    box-shadow: 0px 3px 4px #000000;
+}
+
 .mobile-reverse-cols {
     display: flex;
     flex-direction: column-reverse;
@@ -162,13 +174,6 @@ hr.divider {
 
 .desktop-half-col {
     width: 100%;
-}
-
-.img-placeholder {
-    height: 200px;
-    width: 80%;
-    margin: auto;
-    background: purple;
 }
 
 .centered {
@@ -212,6 +217,14 @@ hr.divider {
 
     .desktop-half-col {
         width: 50%;
+    }
+
+    .desktop-half-col:first-of-type {
+        padding-right: 6px;
+    }
+
+    .desktop-half-col:last-of-type {
+        padding-left: 6px;
     }
 
     .mobile-reverse-cols {
@@ -269,7 +282,7 @@ hr.divider {
 }
 
 #signature {
-    background: linear-gradient(45deg, #ffffff, #c0c0c0, #ffffff, #c0c0c0, #ffffff);
+    background: linear-gradient(45deg, #ffffff, #c0ffc0, #ffffff, #c0ffc0, #ffffff);
     background-clip: text;
     color: transparent;
     font-size: 12px;
@@ -277,5 +290,6 @@ hr.divider {
     padding-bottom: 4px;
     padding-right: 4px;
     text-align: right;
+    text-shadow: 1px 2px 3px #888888;
     width: fit-content;
 }
