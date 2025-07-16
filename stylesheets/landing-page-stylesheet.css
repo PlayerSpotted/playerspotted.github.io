@@ -46,7 +46,7 @@ a:active, a:visited {
 
 .starry-scroll::before {
     animation: scroll-stars 30s ease-in-out alternate infinite;
-    background: url("images/starrybackground.png");
+    background: url("/images/starrybackground.png");
     background-repeat: repeat-x;
     content: '';
     height: inherit;
