@@ -22,8 +22,8 @@ a:active, a:visited {
     color: #541b87;
 }
 
-a.link-highlight {
-    text-shadow: 0 0 3px #c0c0c0;
+p > a {
+    color: inherit;
 }
 
 .moon-backdrop {
