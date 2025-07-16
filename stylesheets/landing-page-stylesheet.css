@@ -22,6 +22,10 @@ a:active, a:visited {
     color: #541b87;
 }
 
+a.link-highlight {
+    text-shadow: 0 0 3px #c0c0c0;
+}
+
 .moon-backdrop {
     background: radial-gradient(circle at 15% 5%, #7481cc, transparent), radial-gradient(circle at 100% 0, #042e83, transparent);
     background-color: #000000;
