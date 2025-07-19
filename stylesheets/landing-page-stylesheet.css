@@ -23,7 +23,11 @@ a:active, a:visited {
 }
 
 p > a {
-    color: inherit;
+    color: #e7ccff;
+}
+
+a.inline-link:visited {
+    color: #ca8eff;
 }
 
 .moon-backdrop {
@@ -91,8 +95,8 @@ h1.page-title {
     display: block;
     margin-bottom: 8px;
     margin-top: 8px;
+    min-width: 160px;
     padding: 16px;
-    width: fit-content;
 }
 
 .socials-container > a:hover .social-tag {
@@ -146,7 +150,7 @@ hr.divider {
 }
 
 .text-box {
-    background-color: #00000022;
+    background-color: #00000040;
     border: solid #6423c3;
     border-radius: 8px;
     box-shadow: 2px 4px 3px #222222;
@@ -203,10 +207,18 @@ hr.divider {
     animation: slide-in-from-bottom 2s cubic-bezier(0.45, 0.45, 0.2, 1.25) backwards;
 }
 
+.wiggles {
+    animation: wiggle-sometimes 6s ease-in-out infinite;
+}
+
 @media (min-width: 440px) {
     .socials-container {
         display: inline;
         width: 50%;
+    }
+
+    .socials-container > a {
+        width: fit-content;
     }
 }
 
@@ -292,6 +304,27 @@ hr.divider {
     100% {
         opacity: 1;
         transform: translateY(0%)
+    }
+}
+
+@keyframes wiggle-sometimes {
+    0%, 75% {
+        transform: rotateZ(0);
+    }
+    80% {
+        transform: rotateZ(3deg)
+    }
+    85% {
+        transform: rotateZ(-3deg);
+    }
+    90% {
+        transform: rotateZ(3deg)
+    }
+    95% {
+        transform: rotateZ(-3deg);
+    }
+    100% {
+        transform: rotateZ(0);
     }
 }
 

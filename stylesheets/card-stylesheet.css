@@ -1,8 +1,18 @@
-/* Intended for Simbatha's 30th birthday digital card. */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 
 body {
-    background: linear-gradient(66deg, #042e83, #440483);
+    background: linear-gradient(66deg, #440483, #042e83, #440483);
     color: #ffffff;
+    margin: 8px 5%;
 }
 
 a {
@@ -16,6 +26,10 @@ a {
     max-width: 1000px;
 }
 
+.title-container h1 {
+    text-align: center;
+}
+
 .container {
     background: #00000055;
     border: solid #9350d5;
@@ -23,11 +37,24 @@ a {
     box-shadow: 2px 3px 4px #000000;
     margin: 24px auto;
     max-width: 800px;
+    overflow-wrap: break-word;
     padding: 8px 24px 16px;
 }
 
 .container * {
     max-width: 100%;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.container h2:after {
+    background: linear-gradient(to right, transparent, #9350d5, transparent);
+    content: '';
+    display: block;
+    height: 2px;
+    margin-top: 4px;
 }
 
 .container img {
@@ -41,3 +68,62 @@ a {
     width: fit-content;
 }
 
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+a.home-btn {
+        background: #ffffff88;
+        border: solid #9350d5;
+        color: #1e0c57;
+        font-size: 22px;
+        width: fit-content;
+}
+
+@media (max-width: 499.9px) {
+    .title-container {
+        margin-left: 15%;
+        margin-right: 15%;
+        text-align: justify;
+    }
+    
+    a.home-btn {
+        border-radius: 12px 12px 0 0;
+        padding: 8px;
+        position: fixed;
+        text-decoration: none;
+        top: 33%;
+        transform: rotateZ(90deg) translateY(100%);
+    }
+
+    .home-btn ~ .home-btn {
+        display: none;
+    }
+}
+
+@media (min-width: 500px) {
+    .home-btn, .home-btn ~ .home-btn {
+        border-radius: 16px;
+        box-shadow: 2px 3px 4px #000000;
+        display: block;
+        margin: auto;
+        padding: 8px 12px;
+        position: relative;
+    }
+}
+
+
+#signature {
+    background: linear-gradient(45deg, #ffffff, #c0ffc0, #ffffff, #c0ffc0, #ffffff);
+    background-clip: text;
+    color: transparent;
+    font-size: 12px;
+    margin-left: auto;
+    padding-bottom: 4px;
+    padding-right: 4px;
+    text-align: right;
+    text-shadow: 1px 2px 3px #888888;
+    width: fit-content;
+}

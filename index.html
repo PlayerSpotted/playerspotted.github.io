@@ -5,18 +5,22 @@
     
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="stylesheet" type="text/css" href="stylesheets/landing-page-stylesheet.css">
         <meta name="description" content="Official landing page of Simbatha, the gaming bunny with a heart of gold and the mouth of a sailor! Find them on Twitch, YouTube, or TikTok.">
-        <link rel="canonical" href="">
         <meta name="theme-color" content="#042e83">
+        <link rel="canonical" href="">
+
+        <link rel="stylesheet" type="text/css" href="stylesheets/landing-page-stylesheet.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" ></script>
+        <script type="text/javascript" src="scripts/landing-page.js"></script>
+
     
         <!-- Social Scraping Metadata -->
         <meta property="og:title" content="Simbatha's Official Page">
         <meta property="og:description" content="Live streams, highlights, and socials all in one place.">
         <meta property="og:type" content="website">
-        <meta property="og:image" content="https://example.com/preview.jpg">
-        <meta property="og:url" content="https://example.com">
-        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:image" content="images/BathaOhNo.png?raw=true">
+        <meta property="og:url" content="">
+        <meta name="twitter:card" content="">
     </head>
 
     <body>
@@ -49,7 +53,7 @@
                         </a>
                     </div>
                     <div class="socials-container">
-                        <a class="centered light-focus slide-in-bottom"  style="animation-delay: 0.9s;" href="" id="paypal" target="_blank">
+                        <a class="centered light-focus slide-in-bottom"  style="animation-delay: 0.9s;" href="" id="discord" target="_blank">
                             <span class="icon"><img src="images/discord.png?raw=true" alt="Discord Logo"></span>
                             <span class="social-tag">Discord</span>
                         </a>
@@ -64,7 +68,7 @@
                             <p>Check out Simbatha, the funny bunny VTuber with a heart of gold and the mouth of a sailor! Elden Lord, PEAK climber, Halo survivor, and Warrior of Light, they stream a variety of games - whatever and whenever they feel like it.</p>
                             <p>Simbatha has been streaming since January 2021 and has played through a number of games, new and retro, silly and stressful. They will scream, they will tell you or others where it can be shoved, and if you're lucky they might even tell you the deep lore of Sonic the Hedgehog.</p>
                             <p>Come hang out, grab some coffee and a warm croissant, and have a good time!</p>
-                            <p>They also had a birthday recently! You can see everyone's well wishes <a class="link-highlight" href="birthday-card.html" class="">here!</a></p>
+                            <p>They also had a birthday recently! You can see everyone's well wishes <a href="birthday-card.html" class="inline-link">here!</a></p>
                         </div>
                         <div class="desktop-half-col">
                             <img class="bordered-img slide-in-left" src="images/BathaOhNo.png?raw=true" alt="Batha's shocked face.">
@@ -73,7 +77,7 @@
                 </div>
                 <div class="text-box">
                     <div class="centered">
-                        <h2 class="slide-in-bottom">They're Funny on YouTube Too!</h2>
+                        <h2 class="wiggles">They're Funny on YouTube Too!</h2>
                         <iframe class="bordered-img embedded-video" height="420" src="https://www.youtube.com/embed/dY7a5cU20fQ?si=eRL0Mtg8DKp4gLT2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
@@ -81,41 +85,4 @@
             <div id="signature">Landing page by PlayerSpotted</div>
         </div>
     </body>
-    <footer></footer>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script defer>
-        var initMoonShift = function () {
-            if(window.scrollY != 0) {
-                moonShift();
-            }
-            $(document).scroll(function() {
-                moonShift();
-            });
-        }, initParallax = function () {
-            if(window.scrollY != 0) {
-                parallaxShift();
-            }
-            $(document).scroll(function() {
-                parallaxShift();
-            });
-        }, moonShift = function () {
-            var globalScroll = $(window).scrollTop(),
-                scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight),
-                moonPos = 15 + scrollPercent * 85;  //center "moon" from 15% to 100%
-            $(".moon-backdrop").css({
-                background: "radial-gradient(circle at " + moonPos + "% 5%, #7481cc, transparent), radial-gradient(circle at 100% 0, #042e83, transparent)",
-                backgroundColor: "#000000",
-            });
-        }, parallaxShift = function () {
-            var globalScroll = $(window).scrollTop(),
-                parallaxObj = $(".parallax"),
-                scrollSpeed = parallaxObj.attr("scrollSpeed");
-            parallaxObj.css("top", "-" + (globalScroll * scrollSpeed) + "px");
-        };
-    
-        initMoonShift();
-    
-    </script>
 </html>
