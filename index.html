@@ -10,7 +10,6 @@
         <link rel="canonical" href="">
 
         <link rel="stylesheet" type="text/css" href="stylesheets/landing-page-stylesheet.css">
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" ></script>
         <script type="text/javascript" src="scripts/landing-page.js"></script>
 
     
@@ -71,7 +70,11 @@
                             <p>They also had a birthday recently! You can see everyone's well wishes <a href="birthday-card.html" class="inline-link">here!</a></p>
                         </div>
                         <div class="desktop-half-col">
-                            <img class="bordered-img slide-in-left" src="images/BathaOhNo.png?raw=true" alt="Batha's shocked face.">
+                            <picture>
+                                <source srcset="images/BathaOhNo.png-x630?raw=true&format=webp 2x, images/BathaOhNo-x300.png?raw=true&format=webp 1x" media="(max-width: 450px)">
+                                <source srcset="images/BathaOhNo.png?raw=true&format=webp 2x, images/BathaOhNo-x630.png?raw=true&format=webp 1x">
+                                <img class="bordered-img slide-in-left" src="images/BathaOhNo-x630.png?raw=true" alt="Batha's shocked face.">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -82,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <div id="signature">Landing page by PlayerSpotted</div>
+            <div id="signature">Page by PlayerSpotted</div>
         </div>
     </body>
 </html>

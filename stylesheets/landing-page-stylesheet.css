@@ -223,6 +223,10 @@ hr.divider {
 }
 
 @media (min-width: 800px) {
+    .desktop-half-col {
+        width: 50%;
+    }
+    
     .page-content-container {
         margin-left: 15%;
         margin-right: 15%;
@@ -239,10 +243,6 @@ hr.divider {
         background: linear-gradient(to right, transparent, #ffffff44 4vw);
         padding-left: 5vw;
         min-width: 150px;
-    }
-
-    .desktop-half-col {
-        width: 50%;
     }
 
     .desktop-half-col:first-of-type {
